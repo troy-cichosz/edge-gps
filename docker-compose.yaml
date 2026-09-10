@@ -1,0 +1,24 @@
+services:
+  edge-gps:
+    #build: .
+    image: $(edge-gps_TAG)
+    container_name: edge-gps
+    restart: unless-stopped
+    uts: host
+    devices:
+      - /dev/serial0:/dev/serial0
+    volumes:
+      - ./config:/app/config:ro
+      - ../logs/edge-gps:/logs
+      - ../metadata:/metadata
+    environment:
+      - GPS_CONFIG=/app/config/gps.yaml
+      - GPS_DEVICE=${GPS_DEVICE:-/dev/serial0}
+      - GPS_BAUDRATE=${GPS_BAUDRATE:-9600}
+      - GPS_LOG_LEVEL=${GPS_LOG_LEVEL:-INFO}
+      - EDGE_CONTROLLER_URL=${EDGE_CONTROLLER_URL}
+      - EDGE_CONTROLLER_TIMEOUT=${EDGE_CONTROLLER_TIMEOUT:-5}
+      - EDGE_NODE_ID=${EDGE_NODE_ID}
+      - EDGE_SERVICE_ID=${EDGE_SERVICE_ID:-edge-gps}
+      - EDGE_SERVICE_NAME=${EDGE_SERVICE_NAME:-edge-gps}
+      - EDGE_SERVICE_VERSION=${EDGE_SERVICE_VERSION:-0.1.0}

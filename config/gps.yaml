@@ -1,0 +1,11 @@
+gps:
+  device: /dev/serial0
+  baudrate: 9600
+  timeout_seconds: 2
+  update_interval_seconds: 1
+  minimum_satellites: 3
+  maximum_hdop: 10.0
+  model: NEO-6M
+  timezone: America/Denver
+  log_level: INFO
+  timezone: America/Denver
