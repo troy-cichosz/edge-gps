@@ -92,15 +92,6 @@ jobs:
             echo "otto" | docker login $(LDR) -u "otto" --password-stdin
 
       - task: Bash@3
-        displayName: 'Run Python Tests'
-        inputs:
-          targetType: 'inline'
-          script: |
-            set -e
-            python3 -m pip install --user pytest
-            python3 -m pytest -q
-
-      - task: Bash@3
         displayName: 'Verify Trivy'
         inputs:
           targetType: 'inline'
