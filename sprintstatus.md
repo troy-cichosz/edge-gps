@@ -1,8 +1,8 @@
-# edge-gps — Sprint Status
+# edge-gps - Sprint Status
 
-**Current sprint:** PAUSED — GPS context-provider integration  
+**Current sprint:** PAUSED - GPS context-provider integration  
 **Status:** PAUSED  
-**Development phase:** GPS foundation → node-local context integration
+**Development phase:** GPS foundation -> node-local context integration
 
 ## Sprint Objective
 

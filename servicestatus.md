@@ -1,4 +1,4 @@
-# edge-gps — Service Status
+# edge-gps - Service Status
 
 **Purpose:** Current development phase and maturity of the GNSS service.  
 **Status:** Development / PAUSED  
